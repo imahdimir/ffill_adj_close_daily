@@ -10,6 +10,7 @@ from pathlib import Path
 from pathlib import PurePath
 
 import pandas as pd
+from mir_tse import save_as_prq_wo_index as sprq
 
 wdpn = Path('wds.xlsx')  # all tse working days
 prpn = Path('prices.prq')  # actual adjusted prices dataset
@@ -52,7 +53,7 @@ def main() :
   df1 = df1.dropna()
 
   ##
-  df1.to_parquet(opn , index = False)
+  sprq(df1 , opn)
 
 ##
 

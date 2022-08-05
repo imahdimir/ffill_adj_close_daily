@@ -5,3 +5,4 @@ fastparquet~=0.8.1
 pyarrow~=8.0.0
 IPython~=8.4.0
 openpyxl~=3.0.10
+mir_tse~=20220805
