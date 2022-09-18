@@ -10,7 +10,7 @@ from pathlib import Path
 from pathlib import PurePath
 
 import pandas as pd
-from mir_tse import save_as_prq_wo_index as sprq
+
 
 wdpn = Path('wds.xlsx')  # all tse working days
 prpn = Path('prices.prq')  # actual adjusted prices dataset
@@ -56,8 +56,14 @@ def main() :
   sprq(df1 , opn)
 
 ##
+import json
 
 
-if __name__ == "__main__" :
-  main()
-  print(f'{PurePath(__file__).name} Done.')
+fp = '/Users/mahdi/Dropbox/d-uniq-BaseTickers/META.json'
+
+with open(fp , 'r') as fi :
+  dct = json.load(fi)
+
+##
+
+##
